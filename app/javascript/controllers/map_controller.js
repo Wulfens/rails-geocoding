@@ -23,11 +23,8 @@ export default class extends Controller {
     this.#fitMapToMarkers()
 
     this.map.on('load', () => {
-      // make an initial directions request that
-      // starts and ends at the same location
       this.getRoute();
 
-      // Add starting point to the map
       this.map.addLayer({
         id: 'point',
         type: 'circle',
@@ -52,7 +49,6 @@ export default class extends Controller {
           'circle-color': '#3887be'
         }
       });
-      // this is where the code from the next step will go
     });
 
 
